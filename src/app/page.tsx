@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import ParallaxSection from "@/components/ParallaxSection";
 import BackToTop from "@/components/BackToTop";
 import LazyMap from "@/components/LazyMap";
+import AI from "@/components/AI";
 
 // Dynamically import heavier interactive components to keep initial
 // server/client bundle small. These components will load only on the
@@ -18,13 +19,15 @@ const HeroCarousel = dynamic(() => import("@/components/HeroCarousel"), {
 });
 
 const ProfitCalculator = dynamic(
-  () => import("@/components/ProfitCalculator"),
-  { ssr: false, loading: () => <div className="h-12" /> }
+  () => import("@/components/ProfitCalculator"), { 
+    ssr: false, 
+    loading: () => <div className="h-12" /> }
 );
 
 export default function Home() {
   return (
     <main>
+      {/* <AI></AI> */}
       {/* Hero - Style dengan Cosmos Blue background */}
       <section
         id="hero"

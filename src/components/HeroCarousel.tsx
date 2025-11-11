@@ -48,8 +48,7 @@ export default function HeroCarousel() {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 8000);
-  };
-
+  }; 
   return (
     <div className="relative w-full h-full">
       {/* Simple carousel with fade effect */}
