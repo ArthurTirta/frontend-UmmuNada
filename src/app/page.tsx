@@ -12,7 +12,7 @@ import AI from "@/components/AI";
 // client, reducing initial JS sent to desktop users and improving
 // Lighthouse/Performance metrics.
 const HeroCarousel = dynamic(() => import("@/components/HeroCarousel"), {
-  ssr: false,
+  // ssr: false,
   loading: () => (
     <div className="w-full h-full bg-[#f3f4f6] rounded-2xl animate-pulse" />
   ),
@@ -20,14 +20,14 @@ const HeroCarousel = dynamic(() => import("@/components/HeroCarousel"), {
 
 const ProfitCalculator = dynamic(
   () => import("@/components/ProfitCalculator"), { 
-    ssr: false, 
+    // ssr: false, 
     loading: () => <div className="h-12" /> }
 );
 
 export default function Home() {
   return (
     <main>
-      {/* <AI></AI> */}
+      <AI></AI>
       {/* Hero - Style dengan Cosmos Blue background */}
       <section
         id="hero"
